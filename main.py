@@ -72,9 +72,8 @@ async def handle(update: Update, context: ContextTypes.DEFAULT_TYPE):
         if not media_urls:
             fallback = f"https://www.hitube.io/en?url={url}"
             await update.message.reply_text(
-                f"❌ Failed to fetch media from {platform.title()}.
-👉 Try manually:\n{fallback}"
-            )
+    f"❌ Failed to fetch media from {platform.title()}.\n👉 Try manually:\n{fallback}"
+)
             continue
 
         for media in media_urls:
